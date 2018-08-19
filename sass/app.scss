@@ -1,0 +1,79 @@
+.extra-controls {
+    margin-top: 50px;
+}
+
+.irs-bar {
+    height: 10px;
+    top: 33px;
+    border-top: 1px solid #10ebb1;
+    border-bottom: 1px solid #10ebb1;
+    background: #10ebb1;
+}
+
+.irs-bar-edge {
+    height: 10px;
+    top: 33px;
+    width: 14px;
+    border: 1px solid #10ebb1;
+    border-right: 0;
+    background: #10ebb1;
+    border-radius: 16px 0 0 16px;
+    -moz-border-radius: 16px 0 0 16px;
+}
+
+.irs-from, .irs-to, .irs-single {
+    display: none;
+}
+
+.irs-slider {
+    background: #091e42;
+    opacity: 1;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    &:hover {
+        background: #091e42;
+    }
+    &:before {
+        content: "\f053  \f054";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #fff;
+    }
+}
+
+.irs-grid {
+    .irs-grid-pol {
+        background: #fff;
+        opacity: 1;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 3px solid #cfd8de;
+        top: -22px;
+        margin-left: -11px;
+    }
+    .irs-grid-pol.small {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+    .irs-grid-text {
+        // &:first-child {
+        //     display: none;
+        // }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:last-child {
+            display: none;    
+        }
+    }
+}
+
+.irs-grid-text {
+    bottom: -9px;
+    color: #99a4ac;
+}

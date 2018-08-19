@@ -1,55 +1,59 @@
-$('#range_min_prefix').ionRangeSlider({
-    // min: 10000,
-    // max: 75000,
-    // from: 25000,
-    // step: 5000,
-    grid: true,
-    grid_snap: true,
-    force_edges: true,
-    prefix: '$',
-    min_prefix: '< ',
-    max_postfix: '+',
-    decorate_both: false,
-    prettify_enabled: true,
-    prettify_separator: ',',
-    hide_min_max: true,
-    values: ['Womans', 'Mostly Womans', 'Any', 'Mostly Mens', 'Mens']
-  });
+var $range = $(".js-range-slider"),
+    $result = $(".js-result"),
+    $getvalues = $(".js-get-values"),
+    
+    from = 1;
+
+var saveResult = function (data) {
+    from = data.from;
+    to = data.to;
+    writeResult();
+};
+
+var writeResult = function () {
+    var result = "from: " + from + ", to: " + to;
+    $result.html(result);
+};
+
+$range.ionRangeSlider({
+  from_min: 1,
+  from_max: 4,
+  grid: true,
+  grid_snap: true,
+  force_edges: true,
+  decorate_both: false,
+  prettify_enabled: true,
+  prettify_separator: ',',
+  hide_min_max: true,
+  values: ['', '5 Customers<br><span>$50/sales</span>', '5 Customers<br><span>$50/sales</span>', '5 Customers<br><span>$50/sales</span>', '5 Customers<br><span>$50/sales</span>', ''],
+    from: from,
+    onStart: function (data) {
+        saveResult(data);
+        writeResult();
+    },
+    onChange: saveResult,
+    onFinish: saveResult
+});
+
+$getvalues.on("click", writeResult);
+
+
+
+// $('#range_min_prefix').ionRangeSlider({
+//     // min: 10000,
+//     // max: 75000,
+//     // from: 25000,
+//     // step: 5000,
+//     grid: true,
+//     grid_snap: true,
+//     force_edges: true,
+//     prefix: '$',
+//     min_prefix: '< ',
+//     max_postfix: '+',
+//     decorate_both: false,
+//     prettify_enabled: true,
+//     prettify_separator: ',',
+//     hide_min_max: true,
+//     values: ['Womans', 'Mostly Womans', 'Any', 'Mostly Mens', 'Mens']
+//   });
   
-  $('#range_balanced').ionRangeSlider({
-    type: 'balanced',
-    from: 1,
-    grid: true,
-    grid_snap: true,
-    force_edges: true,
-    hide_min_max: true,
-    values: ['Womans', 'Mostly Womans', 'Any', 'Mostly Mens', 'Mens']
-  });
-  
-  jQuery.fn.arrayGenerated = function(from, to, start) {
-    var array, i;
-    start = start || 50;
-    array = [];
-    array.push(from);
-    i = -49;
-    while (i < 50) {
-      array.push(from + ' (' + (50 - i++) + '%) / ' + to + ' (' + (50 + i - 1) + '%)');
-    }
-    array.push(to);
-    array[50] = 'Neutral';
-    $(this).ionRangeSlider({
-      type: 'balanced',
-      from: start || 50,
-      hide_from_to: true,
-      force_edges: true,
-      values: array
-    });
-    if (!from || !to) {
-      console.log('"From" or "To" properties not existent!');
-      return false;
-    }
-  };
-  
-  $('#batman_balanced').arrayGenerated('Batman', 'Superman', 30);
-  
-  $('#framework_balanced').arrayGenerated('PHP', 'node.js', 50);
