@@ -5,27 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/M-O-Z-G/ion.rangeSlider/global/css/ion.rangeSlider.skinHTML5.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/M-O-Z-G/ion.rangeSlider/global/css/ion.rangeSlider.skinHTML5.css"> -->
+    <link rel="stylesheet" href="./css/ion-range.css">
+    <link rel="stylesheet" href="./css/ion-skin.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/app.css">
 
     <title>Range Slider</title>
 </head>
 <body>
-    <div class="range-slider">
-        <input type="text" class="js-range-slider" value="" />
-    </div>
-
-    <div class="extra-controls">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="range-slider">
+                            <input type="text" class="js-range-slider" value="" />
+                        </div>
+                
+                        <div class="extra-controls">
+                            <div class="result">
+                                Result: <span class="js-result"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <div class="result">
-            Result: <span class="js-result"></span>
-        </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/js/ion.rangeSlider.min.js"></script>
+        
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/js/ion.rangeSlider.min.js"></script> -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/ion-range.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

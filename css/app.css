@@ -1,62 +1,100 @@
+@charset "UTF-8";
 .extra-controls {
-  margin-top: 50px; }
+  margin-top: 50px;
+}
+
+.irs-line {
+  height: 5px;
+  top: 33px;
+  border: 0;
+}
+.irs-line .irs-line-mid, .irs-line .irs-line-right {
+  background-color: #cfd8de;
+}
 
 .irs-bar {
-  height: 10px;
+  height: 5px;
   top: 33px;
-  border-top: 1px solid #10ebb1;
-  border-bottom: 1px solid #10ebb1;
-  background: #10ebb1; }
+  background: #10ebb1;
+  border: 0;
+}
 
 .irs-bar-edge {
-  height: 10px;
+  height: 5px;
   top: 33px;
   width: 14px;
-  border: 1px solid #10ebb1;
-  border-right: 0;
   background: #10ebb1;
   border-radius: 16px 0 0 16px;
-  -moz-border-radius: 16px 0 0 16px; }
+  -moz-border-radius: 16px 0 0 16px;
+  border-color: #10ebb1;
+  border-width: 2px;
+  border-top: 0;
+  border-bottom: 0;
+}
 
 .irs-from, .irs-to, .irs-single {
-  display: none; }
+  display: none;
+}
 
 .irs-slider {
   background: #091e42;
   opacity: 1;
   height: 27px;
   width: 27px;
-  border-radius: 50%; }
-  .irs-slider:hover {
-    background: #091e42; }
-  .irs-slider:before {
-    content: "\f053  \f054";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    color: #fff; }
+  border-radius: 50%;
+  border: 3px solid #091e42;
+  margin-top: -3px;
+}
+.irs-slider:hover {
+  background: #091e42;
+}
+.irs-slider:before {
+  content: " ";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #fff;
+  font-weight: 100;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
 
 .irs-grid .irs-grid-pol {
   background: #fff;
   opacity: 1;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   border: 3px solid #cfd8de;
-  top: -22px;
-  margin-left: -11px; }
+  top: -20px;
+  margin-left: -11px;
+  z-index: 1;
+  transition: all ease 2s;
+}
+.irs-grid .irs-grid-pol:first-child, .irs-grid .irs-grid-pol:nth-last-child(2) {
+  display: none;
+}
 .irs-grid .irs-grid-pol.small {
   height: 0;
   width: 0;
-  display: none; }
+  display: none;
+}
 .irs-grid .irs-grid-text:nth-child(2) {
-  display: none; }
+  display: none;
+}
 .irs-grid .irs-grid-text:last-child {
-  display: none; }
+  display: none;
+}
 
 .irs-grid-text {
   bottom: -9px;
-  color: #99a4ac; }
+  color: #99a4ac;
+}
 
 /*# sourceMappingURL=app.css.map */
